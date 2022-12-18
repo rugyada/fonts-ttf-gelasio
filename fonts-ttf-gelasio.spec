@@ -11,14 +11,17 @@ BuildArch:	noarch
 %description
 Gelasio is an original typeface which is metrics compatible with Georgia.
 
+%files
+%dir %{_datadir}/fonts/TTF/gelasio/
+%{_datadir}/fonts/TTF/gelasio/*
+
 %prep
-%autosetup -p1 -c %{name}
+%setup -qn %{name}-%{version}/fonts/TTF/gelasio/
+
+%build
+#
 
 %install
 mkdir -p %{buildroot}%{_datadir}/fonts/TTF/gelasio
-install -Dm 644 *.ttf  %{buildroot}%{_datadir}/fonts/TTF/gelasio/
-
-%files
-%dir %{_datadir}/fonts/TTF/gelasio
-%{_datadir}/fonts/TTF/gelasio/*.ttf
+install -Dm 644  *.ttf  %{buildroot}%{_datadir}/fonts/TTF/gelasio/
 
