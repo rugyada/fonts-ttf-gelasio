@@ -19,5 +19,6 @@ mkdir -p %{buildroot}%{_datadir}/fonts/TTF/gelasio
 install -Dm 644 *.ttf  %{buildroot}%{_datadir}/fonts/TTF/gelasio/
 
 %files
-%dir %{_datadir}/fonts/TTF/gelasio/
-%{_datadir}/fonts/TTF/gelasio/*
+%dir %{_datadir}/fonts/TTF/gelasio
+%{_datadir}/fonts/TTF/gelasio/*.ttf
+
